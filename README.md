@@ -13,6 +13,13 @@
 * **Microcontrolador:** ESP32.
 * **Sensores:** DHT22 (Temperatura) e Potenciômetro (Slider).
 * **Display:** LCD 16x2 em modo paralelo.
+## 🚀 Como Executar
+1. O código principal está localizado no arquivo sketch.ino.
+2. As conexões de hardware estão descritas no arquivo diagram.json.
+3. As bibliotecas estão especificadas no arquivo libraries.txt 
+4. **Simulação Online:** Você pode testar o comportamento do sistema diretamente no navegador:
+    * ▶️ [Link para a Simulação no Wokwi](https://wokwi.com/projects/436002682510007297) 
+
 ## ⚠️ Análise Técnica: O Problema da Concorrência
 Nesta implementação, ambas as tarefas de núcleo fixo tentam realizar operações de escrita no LCD (`lcd.setCursor` e `lcd.print`) simultaneamente. Como não foram utilizados mecanismos de exclusão mútua (como **Mutexes**), os sinais de controle do display se sobrepõem, resultando em caracteres corrompidos ou falha total na atualização das linhas. Esta prática serve de base para a introdução de **Semáforos e Mutexes** nas próximas etapas.
 
