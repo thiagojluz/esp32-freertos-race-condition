@@ -102,4 +102,4 @@ As próximas práticas incluem:
 ---
 
 **Prof. Thiago José da Luz, PhD**  
-Universidade Federal do Paraná
+Departamento de Engenharia Elétrica – UFPR
